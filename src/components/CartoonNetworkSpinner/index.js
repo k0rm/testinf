@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import styles from './cartoonnetwork.module.css';
 
 const CartoonNetworkSpinner = ({ interval }) => {
@@ -29,6 +30,10 @@ const CartoonNetworkSpinner = ({ interval }) => {
             </div>
         </div>
     )
+}
+
+CartoonNetworkSpinner.propTypes = {
+    interval: PropTypes.number
 }
 
 export default CartoonNetworkSpinner;

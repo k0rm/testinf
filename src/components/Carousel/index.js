@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import styles from './carousel.module.css';
 
 const Carousel = ({ images, size }) => {
@@ -33,6 +34,10 @@ const Carousel = ({ images, size }) => {
     )
 }
 
+Carousel.propTypes = {
+    images: PropTypes.arrayOf(PropTypes.string),
+    size: PropTypes.oneOf([ "small", "medium", "large"])
+}
 
 
 export default Carousel;

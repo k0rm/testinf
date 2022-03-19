@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './row.module.css';
 
 import Col from '../Col';
@@ -20,5 +21,8 @@ const Row = ({ children }) => {
         )
     }
 
+Row.propTypes = {
+    children: PropTypes.arrayOf(PropTypes.node)
+}
 
 export default Row;

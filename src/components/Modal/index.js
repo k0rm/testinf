@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './modal.module.css';
 
 const Modal = ({ isOpen, onClose, children }) => {
@@ -24,5 +25,11 @@ const Modal = ({ isOpen, onClose, children }) => {
 Modal.Title = ({ children }) => <div className={ styles.title }>{children}</div>;
 Modal.Body = ({ children }) => <div className={ styles.body }>{children}</div>;
 Modal.Footer = ({ children }) => <div className={ styles.footer }>{children}</div>;
+
+Modal.propTypes = {
+    isOpen: PropTypes.bool,
+    onClose: PropTypes.func,
+    children: PropTypes.arrayOf(PropTypes.node)
+}
 
 export default Modal;
